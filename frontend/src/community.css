@@ -1,0 +1,132 @@
+.community-board {
+  padding-bottom: 24px;
+}
+.board-tabs,
+.board-actions,
+.board-pagination {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.community-board button,
+.moderation-panel button {
+  border: 1px solid #dbe1e9;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: white;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.community-board button:disabled,
+.moderation-panel button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.board-tabs button[aria-pressed="true"] {
+  background: #20242c;
+  color: white;
+}
+.board-help,
+.board-meta {
+  font-size: 12px;
+  color: #687384;
+  line-height: 1.7;
+}
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.board-card {
+  background: white;
+  border: 1px solid #e5e9ef;
+  border-radius: 16px;
+  padding: 20px;
+  min-width: 0;
+}
+.board-card header,
+.comments-panel header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+}
+.board-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.7;
+  margin: 14px 0;
+}
+.review-status {
+  font-size: 11px;
+  white-space: nowrap;
+  padding: 3px 8px;
+  border-radius: 20px;
+  background: #edf1f6;
+}
+.review-status.APPROVED {
+  background: #edf8f0;
+  color: #26734b;
+}
+.review-status.PENDING {
+  background: #fff6df;
+  color: #956700;
+}
+.review-status.REJECTED,
+.board-error {
+  color: #b42318;
+}
+.board-pagination {
+  justify-content: center;
+  margin: 20px 0;
+}
+.comments-panel {
+  border: 1px solid #d7e2ef;
+  background: #f8faff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.comments-panel h3 {
+  font-size: 16px;
+}
+.comments-panel label {
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+}
+.comments-panel textarea {
+  display: block;
+  width: 100%;
+  min-height: 85px;
+  border: 1px solid #dbe1e9;
+  border-radius: 10px;
+  padding: 12px;
+  font: inherit;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+.comment-row {
+  padding: 16px 0;
+  border-bottom: 1px solid #e0e7ef;
+}
+.moderation-status {
+  display: flex;
+  gap: 6px;
+  margin: 14px 0;
+  flex-wrap: wrap;
+}
+.moderation-status button[aria-pressed="true"] {
+  background: #20242c;
+  color: white;
+}
+@media (max-width: 700px) {
+  .board-grid {
+    grid-template-columns: 1fr;
+  }
+  .comments-panel {
+    padding: 14px;
+  }
+}
